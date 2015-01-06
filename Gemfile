@@ -3,7 +3,7 @@ ruby '2.1.3'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.0.rc1'
+gem 'rails', '4.1.7'
 #Added devise gem for MVC solution
 gem 'devise'
 # Use sqlite3 as the database for Active Record
