@@ -4,6 +4,16 @@ Rails.application.routes.draw do
   
   get 'widgets/index'
 
+  devise_for :users
+
+devise_scope :user do
+  get '/logout' => 'devise/session#destroy', as: 'logout'
+end
+
+get '/search' => 'martial_arts#search'
+get '/new' => 'martial_arts#new' 
+post '/new' => 'martial_arts#create', as:'martial_arts'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
