@@ -1,19 +1,8 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
   root 'widgets#index'
   
-  get 'widgets/index'
-=======
-  get 'widgets#index'
-
-  evise_for :users
-
-devise_scope :user do
-  get '/logout' => 'devise/session#destroy', as: 'logout'
-end
->>>>>>> f17cac63278cf6df4525aaefbf474b581f2f250c
-
+ 
   devise_for :users
 
 devise_scope :user do
