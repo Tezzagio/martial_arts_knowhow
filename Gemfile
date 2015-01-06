@@ -6,7 +6,19 @@ gem 'rails', '4.2.0.rc1'
 #Added devise gem for MVC solution
 gem 'devise'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
+#replaced 'sqlite' with group development gem
+group :development do
+	gem 'sqlite3'
+end
+#adding group production gems; 'pg' Ruby interface to PostgeSQL
+#adding rails_12factor, neccessary for Heroku. "This gem enables serving assets in production and setting your logger to standard out"
+group :production do 
+	gem 'pg'
+	gem 'rails_12factor'
+end
+#added 'thin' gem; faster web server
+gem 'thin'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0'
 # Use Uglifier as compressor for JavaScript assets
