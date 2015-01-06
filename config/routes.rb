@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-  root 'widgets#index'
+  root 'martial_arts#index'
+
+  get 'martial_arts/index'
   
- 
   devise_for :users
 
 devise_scope :user do
