@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  get 'widgets/index'
+
+  get 'widgets#index'
+
+  evise_for :users
+
+devise_scope :user do
+  get '/logout' => 'devise/session#destroy', as: 'logout'
+end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
