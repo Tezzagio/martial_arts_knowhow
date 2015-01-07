@@ -6,5 +6,5 @@ class User < ActiveRecord::Base
 end
 
 
-has_many :votes
-has_many :martial_arts {':through =>  '}
+#has_many :votes
+#has_many :martial_arts {':through =>  '}
