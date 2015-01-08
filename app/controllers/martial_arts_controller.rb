@@ -8,7 +8,7 @@ class MartialArtsController < ApplicationController
 
   def search
     @search = params[:query]
-    @martial_arts = Movie.search(@search)
+    @martial_arts = MartialArt.search(@search)
     @no_results = !@martial_art
   end
 
@@ -17,7 +17,7 @@ class MartialArtsController < ApplicationController
     @martial_arts = MartialArt.order('id DESC').all
   end
 
-  def create_comment
+  def create
     @martial_art = MartialArt.new(parameters)
     if @martial_art.valid?
       @martial_art.save
