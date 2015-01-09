@@ -2,16 +2,19 @@ Rails.application.routes.draw do
 
   root 'martial_arts#index'
 
-  get 'martial_arts/index'
+  #get 'martial_arts/index'
+
+  get '/ads' => 'home#new', as: :ads
+  post '/ads' => 'home#create'
   
   devise_for :users
 
-devise_scope :user do
+  devise_scope :user do
   get '/logout' => 'devise/session#destroy', as: 'logout'
 end
 
 get '/search' => 'martial_arts#search'
-get '/new' => 'martial_arts#new' 
+get '/new' => 'martial_arts#new', as: 'comment' 
 post '/new' => 'martial_arts#create', as:'martial_arts'
 
   # The priority is based upon order of creation: first created -> highest priority.
