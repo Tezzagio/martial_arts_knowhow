@@ -30,7 +30,7 @@ def new
   private
 
   def parameters
-    params.require(:martial_art).permit(:name, :popularity)
+    params.require(:martial_art).permit(:name, :description)
   end
     
 end
