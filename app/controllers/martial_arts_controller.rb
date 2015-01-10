@@ -13,8 +13,12 @@ class MartialArtsController < ApplicationController
 
 def new
     @martial_art = MartialArt.new(user: current_user) 
-    #@martial_arts = MartialArt.order('id DESC').all
   end
+
+#def new
+    #@story = Story.new user_id: current_user.id
+    #@story = current_user.stories.new
+  #end
 
   def create
     @martial_art = MartialArt.new(parameters.merge(user: current_user))
