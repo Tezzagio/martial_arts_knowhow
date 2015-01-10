@@ -11,14 +11,14 @@ class MartialArtsController < ApplicationController
     @no_results = !@martial_art
   end
 
-  def new
-    @martial_art = MartialArt.new(user: current_user) 
-  end
-
-#def new
-    #@story = Story.new user_id: current_user.id
-    #@story = current_user.stories.new
+  #def new
+    #@martial_art = MartialArt.new(user: current_user) 
   #end
+
+ def new
+    @martial_art = @martial_art.new user_id: current_user.id
+    @martial_art = current_user.@martial_art.new
+  end
 
   def create
     @martial_art = MartialArt.new(parameters.merge(user: current_user))
