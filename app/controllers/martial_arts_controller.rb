@@ -11,7 +11,7 @@ class MartialArtsController < ApplicationController
     @no_results = !@martial_art
   end
 
-def new
+  def new
     @martial_art = MartialArt.new(user: current_user) 
   end
 
