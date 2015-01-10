@@ -1,0 +1,23 @@
+<h1>
+	Your searched generated the following result
+</h1>
+
+<p>
+
+ <%= @search %>
+
+</p>
+
+<% if @no_results %>
+<h1> MARTIAL ART WAS NOT FOUND</h1>
+
+<% else %>
+
+<p>Here's the Martial Art you have requested:</p>
+
+<%= render partial: 'martial_art', locals: { martial_art: @martial_art } %>
+
+	<% end %>
+
+
+<% end %>

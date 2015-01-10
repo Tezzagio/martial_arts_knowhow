@@ -11,31 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150106200704) do
+ActiveRecord::Schema.define(version: 20150110000255) do
 
-  create_table "martial_arts", force: :cascade do |t|
-    t.string   "name"
+  create_table "martial_arts", force: true do |t|
+    t.string   "name",       limit: nil
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   add_index "martial_arts", ["user_id"], name: "index_martial_arts_on_user_id"
 
-  create_table "users", force: :cascade do |t|
+  create_table "regional_origins", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "widgets", force: :cascade do |t|
-    t.string   "name"
+  create_table "widgets", force: true do |t|
+    t.string   "name",       limit: nil
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
-  
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
+  add_index "widgets", ["user_id"], name: "index_widgets_on_user_id"
 
 end
