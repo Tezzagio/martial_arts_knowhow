@@ -26,13 +26,15 @@ def new
     end
     flash[:error] = "You have errors"
   end
-    
-end
 
   private
 
   def parameters
     params.require(:martial_art).permit(:name, :popularity)
   end
-
+    
 end
+
+  
+
+
