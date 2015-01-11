@@ -21,11 +21,11 @@ class MartialArtsController < ApplicationController
 
  def new
     @martial_art = MartialArt.new user_id: current_user.id
-    @martial_art = current_user.id@martial_art.new
+    @martial_art = current_user.comments.new
   end
 
 def create
-    safe_martial_art_params = params.require(:comment).permit(:title, :description)
+    safe_martial_art_params = params.require(:comment).permit(:name, :description)
     @martial_art = current_user.martial_arts.new safe_martial_art_params.merge(:upvotes => 1)
 
     if @martial_art.save
