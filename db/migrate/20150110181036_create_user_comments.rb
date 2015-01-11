@@ -8,12 +8,3 @@ class CreateUserComments < ActiveRecord::Migration
     end
   end
 end
-
-
-  #def change
-    #create_table :user_comments do |t|
-
-      #t.timestamps
-    #end
-  #end
-#end

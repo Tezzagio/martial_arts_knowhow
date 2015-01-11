@@ -2,7 +2,7 @@ class MartialArtsController < ApplicationController
 	before_action :authenticate_user!, only: [ :new, :create ]
 
   def index
-    @martial_arts = MartialArt.all
+    @martial_arts = MartialArt.order('id DESC').all
   end
 
   def search
@@ -13,6 +13,10 @@ class MartialArtsController < ApplicationController
 
   def add
     @martial_art = MartialArt.new(user: current_user) 
+  end
+
+  def show
+    @martial_art = MartialArt.find params[:id]
   end
 
   def comment
@@ -36,5 +40,5 @@ def create
   def parameters
     params.require(:martial_art).permit(:name, :description)
   end
-end
+ end
 end
