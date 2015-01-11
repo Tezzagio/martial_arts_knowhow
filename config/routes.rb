@@ -2,10 +2,7 @@ Rails.application.routes.draw do
 
   root 'martial_arts#index'
 
-  #get 'martial_arts/index'
-
-  get '/ads' => 'home#new', as: :ads
-  post '/ads' => 'home#create'
+  get 'martial_arts/index'
   
   devise_for :users
 

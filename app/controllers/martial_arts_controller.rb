@@ -2,8 +2,12 @@ class MartialArtsController < ApplicationController
 	before_action :authenticate_user!, only: [ :new, :create ]
 
   def index
-    @martial_arts = MartialArt.order('id DESC').all
+    @martial_arts = MartialArt.all
   end
+
+  #def show
+    #@story = Story.find params[:id]
+  #end
 
   def search
     @search = params[:query]
@@ -16,19 +20,29 @@ class MartialArtsController < ApplicationController
   #end
 
  def new
-    @martial_art = @martial_art.new user_id: current_user.id
-    @martial_art = current_user.@martial_art.new
+    @martial_art = MartialArt.new user_id: current_user.id
+    @martial_art = current_user.id@martial_art.new
   end
 
-  def create
-    @martial_art = MartialArt.new(parameters.merge(user: current_user))
-    if @martial_art.valid? && @martial_art.save!
-      flash[:info] = 'Great!!! Martial Art added'
-      redirect_to root_path
+def create
+    safe_martial_art_params = params.require(:comment).permit(:title, :category)
+    @martial_art = current_user.martial_arts.new safe_martial_art_params.merge(:upvotes => 1)
+
+    if @martial_art.save
+      redirect_to @martial_art
     else
       render :new
     end
-    flash[:error] = "You have errors"
+
+  #def create
+    #@martial_art = MartialArt.new(parameters.merge(user: current_user))
+    #if @martial_art.valid? && @martial_art.save!
+      #flash[:info] = 'Your new Martial Art comment has now been added'
+      #redirect_to root_path
+    #else
+      #render :new
+    #end
+    #flash[:error] = "An error has been encountered"
   end
 
   private
@@ -38,7 +52,3 @@ class MartialArtsController < ApplicationController
   end
     
 end
-
-  
-
-

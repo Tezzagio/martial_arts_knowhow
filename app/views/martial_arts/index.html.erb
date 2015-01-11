@@ -1,16 +1,7 @@
-
+<!DOCTYPE html>
 <h1>Discover which Martial Art is more suitable for you and your children</h1>
 
 <p>Genuine Martial Arts information</p>
-
-<div>
-
-<form action="/search" >
-<input name="query" type="text" />
-<button>Enter</button>
-</form>
-
-</div>
 
 <p>Please choose a Martial Art from the following list</p>
 
@@ -27,3 +18,20 @@
 	<li>Tang Soo Do</li>
 	<li>Muay Thai</li>
 </ul>
+
+<div>
+
+<form action="/search" >
+<input name="query" type="text" />
+<button>Enter</button>
+</form>
+
+</div>
+
+<p>
+	<%= link_to 'Add a New Martial Art', martial_arts_path %>
+</p>
+
+<% @martial_arts.each do |martial_art| %>
+	<%= render partial: 'martial_art', locals: { a_martial_art: movie } %>
+<% end %>
