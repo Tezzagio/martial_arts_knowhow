@@ -4,7 +4,8 @@ class MartialArt < ActiveRecord::Base
 
   belongs_to :regional_origin
 
-  validates :name, presence: true, uniqueness: true, :upvotes presence: true
+  validates :name, presence: true, uniqueness: true 
+  validates :upvotes, presence: true
   validates :description, presence: true
   scope :popular, -> { where('upvotes >= ?', 4)}
   scope :recent, -> { where('created_at >= ?', Date.today)}
