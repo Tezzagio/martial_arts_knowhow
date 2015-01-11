@@ -2,8 +2,6 @@ class MartialArt < ActiveRecord::Base
   belongs_to :user
   has_many :comments
 
-  belongs_to :regional_origin
-
   validates :name, presence: true, uniqueness: true 
   validates :upvotes, presence: true
   validates :description, presence: true

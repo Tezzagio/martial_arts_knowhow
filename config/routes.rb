@@ -1,18 +1,17 @@
 Rails.application.routes.draw do
+  devise_for :users
 
   root 'martial_arts#index'
 
-  get 'martial_arts/index'
+  #get 'martial_arts/index'
   
-  devise_for :users
-
   devise_scope :user do
   get '/logout' => 'devise/session#destroy', as: 'logout'
 end
 
-get '/search' => 'martial_arts#search'
-get '/new' => 'martial_arts#new', as: 'comment' 
-post '/new' => 'martial_arts#create', as:'martial_arts'
+  get '/search' => 'martial_arts#search'
+  get '/new' => 'martial_arts#new', as: 'comment' 
+  post '/new' => 'martial_arts#create', as:'martial_arts'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

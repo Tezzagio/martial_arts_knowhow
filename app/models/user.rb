@@ -5,6 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 
-	has_many :comments
-	has_many :martial_arts, :through => :comments
+	has_many :user_comments
+	has_many :comments, :through => :user_comments
 end
