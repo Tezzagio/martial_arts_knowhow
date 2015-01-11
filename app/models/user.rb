@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  	devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
 
@@ -11,5 +11,5 @@ class User < ActiveRecord::Base
   has_many :user_comments
   has_many :comments, through: :user_comments
 
-  has_many :martial_arts
+  belongs_to :martial_arts
 end
