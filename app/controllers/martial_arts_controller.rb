@@ -6,7 +6,7 @@ class MartialArtsController < ApplicationController
   end
 
   #def show
-    #@story = Story.find params[:id]
+    #@martial_art = martial_art.find params[:id]
   #end
 
   def search
@@ -25,7 +25,7 @@ class MartialArtsController < ApplicationController
   end
 
 def create
-    safe_martial_art_params = params.require(:comment).permit(:title, :category)
+    safe_martial_art_params = params.require(:comment).permit(:title, :description)
     @martial_art = current_user.martial_arts.new safe_martial_art_params.merge(:upvotes => 1)
 
     if @martial_art.save
