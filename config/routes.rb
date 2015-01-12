@@ -9,9 +9,9 @@ Rails.application.routes.draw do
 end
 
   get '/search' => 'martial_arts#search'
-  get '/new' => 'martial_arts#new', as: 'comment'
-  post '/new' => 'martial_arts#new', as: 'user_comment'
-  post '/new' => 'martial_arts#create', as:'martial_art'
+  get '/new' => 'martial_arts#new', as: 'new_user'
+  post '/new' => 'martial_arts#comment', as: 'user_comment'
+  post '/new' => 'martial_arts#create', as: 'martial_art'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
