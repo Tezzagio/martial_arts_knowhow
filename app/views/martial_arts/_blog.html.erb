@@ -1,0 +1,14 @@
+<div class='panel panel-default'>
+  <div class="panel-heading">
+    <%= bolg.title  %>
+  </div>
+
+  <div class="panel-body">
+    <p><%= blog.description  %></p>
+  </div>
+
+  <div class="panel-footer">
+    Filled under: <%= blog.category.name  %> by <%= blog.user.email  %> on <%= blog.created_at  %>
+</div>
+
+</div>
