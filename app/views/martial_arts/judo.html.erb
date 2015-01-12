@@ -4,5 +4,10 @@
 
 <p>To add your Judo wisdom, please join the discussion</p>
 
+<%= link_to 'blog new', ads_path   %>
+<% @blogs.each do |ad|  %>
 
+  <%= render partial: 'blog', locals: { blog: blog }  %>
+  
+<% end %>
 
