@@ -20,16 +20,16 @@ ActiveRecord::Schema.define(version: 20150110181036) do
     t.datetime "updated_at"
   end
 
-    add_index "comments", ["story_id"], name: "index_comments_on_story_id"
+    add_index "comments", ["martial_arts_id"], name: "index_comments_on_martial_arts_id"
 
 
   create_table "martial_arts", force: true do |t|
-    t.text   "name",       limit: nil
-    t.text   "description"
+    t.text     "name",       limit: nil
+    t.text     "description"
     t.integer  "user_id"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-    t.string   "image"
+    t.string   "martial_arts_poster"
   end
 
   add_index "martial_arts", ["user_id"], name: "index_martial_arts_on_user_id"
@@ -68,13 +68,13 @@ ActiveRecord::Schema.define(version: 20150110181036) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
-  create_table "widgets", force: true do |t|
-    t.string   "name",       limit: nil
-    t.integer  "user_id"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
+  #create_table "widgets", force: true do |t|
+    #t.string   "name",       limit: nil
+    #t.integer  "user_id"
+    #t.datetime "created_at",             null: false
+    #t.datetime "updated_at",             null: false
+  #end
 
-  add_index "widgets", ["user_id"], name: "index_widgets_on_user_id"
+  #add_index "widgets", ["user_id"], name: "index_widgets_on_user_id"
 
 end

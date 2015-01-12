@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
-
+  
   root 'martial_arts#index'
+
+  devise_for :users
   
   devise_scope :user do
   get '/logout' => 'devise/session#destroy', as: 'logout'

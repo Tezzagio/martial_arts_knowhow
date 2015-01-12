@@ -1,6 +1,6 @@
-class WidgetsController < ApplicationController
-	before_action :authenticate_user!, only: [ :new, :create ]
+#class WidgetsController < ApplicationController
+	#before_action :authenticate_user!, only: [ :new, :create ]
 
-  def index
-  end
-end
+  #def index
+  #end
+#end

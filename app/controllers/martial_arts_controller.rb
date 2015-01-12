@@ -2,7 +2,7 @@ class MartialArtsController < ApplicationController
 	before_action :authenticate_user!, only: [ :new, :create ]
 
   def index
-    @martial_arts = MartialArt.order('id DESC').all
+    @martial_arts = MartialArt.all
   end
 
   def search
