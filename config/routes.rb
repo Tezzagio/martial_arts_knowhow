@@ -9,6 +9,17 @@ Rails.application.routes.draw do
 end
 
   get '/search' => 'martial_arts#search'
+  get '/karate' => 'martial_arts#karate' as: 'logged_in user'
+  get '/kung_fu' => 'martial_arts#kung_fu' as: 'logged_in user'
+  get '/judo' => 'martial_arts#judo' as: 'logged_in user'
+  get '/tia_chi' => 'martial_arts#tia_chi' as: 'logged_in user'
+  get '/taekwondo' => 'martial_arts#taekwondo' as: 'logged_in user'
+  get '/aikido' => 'martial_arts#aikido' as: 'logged_in user'
+  get '/krav_maga' => 'martial_arts#krav_maga' as: 'logged_in user'
+  get '/jui_jitsu' => 'martial_arts#jui_jitsu' as: 'logged_in user'
+  get '/brazilian_jui_jitsu' => 'martial_arts#brazilian_jui_jitsu' as: 'logged_in user'
+  get '/muay_thai' => 'martial_arts#muay_thai' as: 'logged_in user'
+  get '/kung_fu' => 'martial_arts#kung_fu' as: 'logged_in user'
   get '/new' => 'martial_arts#new', as: 'new_user'
   post '/new' => 'martial_arts#comment', as: 'user_comment'
   post '/new' => 'martial_arts#create', as: 'martial_art'
