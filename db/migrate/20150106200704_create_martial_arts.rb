@@ -7,6 +7,6 @@ class CreateMartialArts < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    add_foreign_key :martial_arts, :users
+#    add_foreign_key :martial_arts, :users
   end
 end
