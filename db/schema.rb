@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150112211006) do
+ActiveRecord::Schema.define(version: 20150113163057) do
 
   create_table "blogs", force: true do |t|
     t.string   "title"
@@ -31,10 +31,11 @@ ActiveRecord::Schema.define(version: 20150112211006) do
   end
 
   create_table "martial_arts", force: true do |t|
-    t.string   "name",       limit: nil
+    t.string   "name",        limit: nil
     t.integer  "user_id"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.text     "description"
   end
 
   add_index "martial_arts", ["user_id"], name: "index_martial_arts_on_user_id"
