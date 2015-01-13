@@ -36,22 +36,22 @@ class MartialArtsController < ApplicationController
 
   end
 
-  def create
-    safe_martial_art_params = params.require(:comment).permit(:name, :description)
-    @martial_art = current_user.comments.new safe_martial_art_params.merge(:upvotes => 1)
+def create
+  @martial_art = MartialArt.new(parameters)
+  if @martial_art.valid?
+    @martial_art.save
+    flash[:info] = 'Your new Martial Art has now been added'
+    return redirect_to root_path
+  end
 
-    if @martial_art.save
-      flash[:info] = 'Your new Martial Art comment has now been added'
-      redirect_to @martial_art
-    else
-      render :new
-    end
+   flash[:error] = "You have errors"
+end
 
   private
 
   def parameters
-    params.require(:martial_art).permit(:name, :description)
+    params.require(:martial_art).permit(:name, :user_id)
     params.require(:blog).permit(:user_id, :category_id)
   end
- end
+
 end

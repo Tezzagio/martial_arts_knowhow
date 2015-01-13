@@ -22,10 +22,10 @@ end
   get '/brazilian_jui_jitsu' => 'martial_arts#brazilian_jui_jitsu' 
   get '/muay_thai' => 'martial_arts#muay_thai' 
   get '/kung_fu' => 'martial_arts#kung_fu' 
-  get '/new' => 'martial_arts#new', as: 'new_martial_art'
-  post '/new' => 'martial_arts#comment', as: 'user_comment'
-  post '/new' => 'martial_arts#create', as: 'martial_art'
-  post '/new' => 'blog#create', as: 'blogs'
+  #get '/new' => 'martial_arts#new', as: 'new_martial_art'
+  post '/comment' => 'martial_arts#comment', as: 'user_comment'
+  post '/create' => 'martial_arts#create', as: 'martial_arts'
+  post '/write' => 'blog#write', as: 'blogs'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

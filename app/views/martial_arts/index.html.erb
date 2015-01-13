@@ -15,21 +15,15 @@
 
 h1 {
     text-align: center;
-    font-family: helvetica;
-    border:1px solid yellow;
+    font-family: Georgia;
+    border:1px solid black;
 
 }
 
 h2 {
-    text-align: center;
+    text-align: left;
     color: black;
-    font-family: helvetica;
-}
-
-h3 {
-    text-align: center;
-    color: black;
-    font-family: helvetica;
+    font-family: Georgia;
 }
 
 p  {
@@ -39,15 +33,25 @@ p  {
     margin:0px;
 }
 
+div  {
+    text-align: center;
+}
+
+ul  {
+    text-align: left;
+}
+
 </style>
 
-<h1 style="color:black">Genuine Martial Arts information</h1>
+<h1 style="color: black">Martial Art discussions</h1>
 
-<p style="color:black">Discover which Martial Art is more suitable for you and your children</p>
+<p style="color: black">Discover which Martial Art is more suitable for you and your children</p>
 
-<p style="color:black">Please choose a Martial Art from the following list</p>
+<p>
+	<%= link_to 'Add a new Martial Art for discussion (please log in first)', martial_arts_path %>
+</p>
 
-<h2>Search for your Martial Art below</h2>
+<p style="color: black">Search for your Martial Art below</p>
 
 <div>
 
@@ -58,20 +62,22 @@ p  {
 
 </form>
 
-</div>
-
-<h3>
-	<%= link_to 'Add a New Martial Art', martial_art_path %>
-</h3>
-
-	<% @martial_arts.each do |martial_art| %>
+<% @martial_arts.each do |martial_art| %>
 
 	<%= render partial: 'martial_art', locals: { a_martial_art: martial_art } %>
 
 <% end %>
+
+</div>
+
+<h2>Current Martial Arts</h2>
+
+
+
  <ul>
+
   <li><a href="http://en.wikipedia.org/wiki/Karate">Karate</a></li>
-  <li><a href="http://en.wikipedia.org/wiki/Kung_fu_%28term%29">Kung_fu</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Kung_fu_%28term%29">Kung Fu</a></li>
   <li><a href="http://en.wikipedia.org/wiki/Judo">Judo</a></li>
   <li><a href="http://en.wikipedia.org/wiki/Tai_chi">Tai Chi</a></li>
   <li><a href="http://en.wikipedia.org/wiki/Taekwondo">Taekwondo</a></li>
@@ -81,6 +87,7 @@ p  {
   <li><a href="http://en.wikipedia.org/wiki/Brazilian_jiu-jitsu">Brazilian Jui Jitsu</a></li>
   <li><a href="http://en.wikipedia.org/wiki/Tang_Soo_Do">Tang Soo Do</a></li>
   <li><a href="http://en.wikipedia.org/wiki/Muay_Thai">Muay Thai</a></li>
+
 </ul>
 
 

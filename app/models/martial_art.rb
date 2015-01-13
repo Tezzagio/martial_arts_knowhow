@@ -3,8 +3,8 @@ class MartialArt < ActiveRecord::Base
   belongs_to :comments
 
   validates :name, presence: true, uniqueness: true 
-  validates :upvotes, presence: true
-  validates :description, presence: true
+  validates :user_id, presence: true, uniqueness: true 
+
   scope :popular, -> { where('upvotes >= ?', 4)}
   scope :recent, -> { where('created_at >= ?', Date.today)}
 
