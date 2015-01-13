@@ -1,2 +1,11 @@
+<%= if @blog.errors.any? %>
 
+<ol>
+	<% @blog.errors.full_messages.each do |messages| %>
+	 <li><%= 'sorry there was a fault with your selection' %></li>
+	 <% end %>>
+ 		</ol>
+
+
+ <% end %>
 <%= render partial: 'blog new', locals: { blog: blog } %>

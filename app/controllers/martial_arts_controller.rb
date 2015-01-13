@@ -24,7 +24,19 @@ class MartialArtsController < ApplicationController
     @martial_art = current_user.comments.new
   end
 
-def create
+  def blog
+      @blog = Blog.new(parameters)
+      if @blog.valid?
+        @blog.save
+        flash[:info] = 'Nice one! Blog created'
+        return redirect_to root_path
+    end
+
+    flash[:error] = "You have errors"
+
+  end
+
+  def create
     safe_martial_art_params = params.require(:comment).permit(:name, :description)
     @martial_art = current_user.comments.new safe_martial_art_params.merge(:upvotes => 1)
 
@@ -39,6 +51,7 @@ def create
 
   def parameters
     params.require(:martial_art).permit(:name, :description)
+    params.require(:blog).permit(:user_id, :category_id)
   end
  end
 end
