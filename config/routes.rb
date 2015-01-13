@@ -20,7 +20,7 @@ end
   get '/brazilian_jui_jitsu' => 'martial_arts#brazilian_jui_jitsu' 
   get '/muay_thai' => 'martial_arts#muay_thai' 
   get '/kung_fu' => 'martial_arts#kung_fu' 
-  get '/new' => 'martial_arts#new', as: 'new_user'
+  get '/new' => 'martial_arts#new', as: 'new_martial_art'
   post '/new' => 'martial_arts#comment', as: 'user_comment'
   post '/new' => 'martial_arts#create', as: 'martial_art'
 
