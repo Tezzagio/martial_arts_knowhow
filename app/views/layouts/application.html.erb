@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>MartialArtsKnowhow</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -73,15 +74,53 @@
         </div><!-- /.container-fluid -->
       </nav>
 
-  <div class="nav">
-    <% if user_signed_in? %>
-    Hello <%= current_user.email %>
-    <%= link_to 'log out', logout_path %>
-    <%else%>
-    <%= link_to 'log in', new_user_session_path %>
-    <%end%>
+<ul>
 
-  </div>
+  <style>
+
+  body {
+    text-align: left;
+    background: black;
+    color: white;
+    font-family: helvetica;
+    }
+    
+  </style>
+
+  <li><a href="http://en.wikipedia.org/wiki/Karate">Karate</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Kung_fu_%28term%29">Kung_fu</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Judo">Judo</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Tai_chi">Tai Chi</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Taekwondo">Taekwondo</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Aikido">Aikido</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Krav_Maga">Krav Maga</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Jiu_jitsu">Jui Jitsu</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Brazilian_jiu-jitsu">Brazilian Jui Jitsu</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Tang_Soo_Do">Tang Soo Do</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Muay_Thai">Muay Thai</a></li>
+</ul>
+
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Sign in', new_user_session_path)  %>  
+  </li>
+
+<% end %>
+
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Edit registration', edit_user_registration_path) %>
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Register', new_user_registration_path)  %>
+  </li>
+
+<% end %>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>

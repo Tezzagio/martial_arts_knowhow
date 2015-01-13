@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   
-  root 'martial_arts#index'
-
-  devise_for :users
   
   devise_scope :user do
   get '/logout' => 'devise/session#destroy', as: 'logout'
 end
 
+  devise_for :users
+
+  root 'martial_arts#index'
+
+  
   get '/search' => 'martial_arts#search'
   get '/karate' => 'martial_arts#karate' 
   get '/kung_fu' => 'martial_arts#kung_fu' 
@@ -23,6 +25,7 @@ end
   get '/new' => 'martial_arts#new', as: 'new_martial_art'
   post '/new' => 'martial_arts#comment', as: 'user_comment'
   post '/new' => 'martial_arts#create', as: 'martial_art'
+  post '/new' => 'blog#create', as: 'blogs'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -79,3 +82,5 @@ end
   #     resources :products
   #   end
 end
+
+

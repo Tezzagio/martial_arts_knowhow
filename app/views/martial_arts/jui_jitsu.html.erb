@@ -4,8 +4,8 @@
 
 <p>To add your Jui Jitsu wisdom, please join the discussion</p>
 
-<%= link_to 'blog new', ads_path   %>
-<% @blogs.each do |ad|  %>
+<%= link_to 'blog new', blog_path   %>
+<% @blogs.each do |blog|  %>
 
   <%= render partial: 'blog', locals: { blog: blog }  %>
   
