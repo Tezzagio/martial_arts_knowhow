@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 
-<h1 style="color:black">Genuine Martial Arts information</h1>
-
-<p style="color:black">Discover which Martial Art is more suitable for you and your children</p>
-
-<p style="color:black">Please choose a Martial Art from the following list</p>
-
 <style>
 
   body {
@@ -17,6 +11,64 @@
     
  </style>
 
+<style>
+
+h1 {
+    text-align: center;
+    font-family: helvetica;
+    border:1px solid yellow;
+
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    font-family: helvetica;
+}
+
+h3 {
+    text-align: center;
+    color: black;
+    font-family: helvetica;
+}
+
+p  {
+    text-align: center;
+    font-family: helvetica;
+    padding:0.5px;
+    margin:0px;
+}
+
+</style>
+
+<h1 style="color:black">Genuine Martial Arts information</h1>
+
+<p style="color:black">Discover which Martial Art is more suitable for you and your children</p>
+
+<p style="color:black">Please choose a Martial Art from the following list</p>
+
+<h2>Search for your Martial Art below</h2>
+
+<div>
+
+<form action="/search" >
+<input name="query" type="text" style="color:black" text="color:black"/>
+
+<button style="color:black">Search</button>
+
+</form>
+
+</div>
+
+<h3>
+	<%= link_to 'Add a New Martial Art', martial_art_path %>
+</h3>
+
+	<% @martial_arts.each do |martial_art| %>
+
+	<%= render partial: 'martial_art', locals: { a_martial_art: martial_art } %>
+
+<% end %>
  <ul>
   <li><a href="http://en.wikipedia.org/wiki/Karate">Karate</a></li>
   <li><a href="http://en.wikipedia.org/wiki/Kung_fu_%28term%29">Kung_fu</a></li>
@@ -32,22 +84,3 @@
 </ul>
 
 
-<div>
-
-<form action="/search" >
-<input name="query" type="text" />
-
-<button style="color:black">Enter</button>
-</form>
-
-</div>
-
-<p>
-	<%= link_to 'Add a New Martial Art', martial_art_path %>
-</p>
-
-	<% @martial_arts.each do |martial_art| %>
-
-	<%= render partial: 'martial_art', locals: { a_martial_art: martial_art } %>
-
-<% end %>
