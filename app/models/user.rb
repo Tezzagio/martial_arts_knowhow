@@ -11,5 +11,6 @@ class User < ActiveRecord::Base
 	has_many :comments
 	has_many :user_comments, :through => :comments
 
+
     belongs_to :user
 end

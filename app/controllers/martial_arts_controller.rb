@@ -53,6 +53,4 @@ end
     params.require(:martial_art).permit(:name, :description, :user_id)
     params.require(:blog).permit(:user_id, :category_id)
   end
-
- end
 end

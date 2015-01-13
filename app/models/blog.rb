@@ -5,12 +5,6 @@ class Blog < ActiveRecord::Base
 	validates :user_id, presence: true, uniqueness: true
 	validates :category_id, presence: true, uniqueness: true
 
-	def self.search(search)
-		self.where("name LIKE ?", "%#{@search}%").first
-	end
-end
 
   belongs_to :user
-  belongs_to :category
-
 end

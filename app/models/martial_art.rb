@@ -6,8 +6,8 @@ class MartialArt < ActiveRecord::Base
   validates :description, presence: true
   validates :user_id, presence: true, uniqueness: true 
 
-  scope :popular, -> { where('upvotes >= ?', 4)}
-  scope :recent, -> { where('created_at >= ?', Date.today)}
+  #scope :popular, -> { where('upvotes >= ?', 4)}
+  #scope :recent, -> { where('created_at >= ?', Date.today)}
 
   def self.search_for(query)
     where('title LIKE :query OR category LIKE :query', query: "%#{query}%")
