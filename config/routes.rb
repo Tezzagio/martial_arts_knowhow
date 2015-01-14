@@ -11,6 +11,8 @@ end
 
   
   get '/search' => 'martial_arts#search'
+  get '/new' => 'martial_arts#new'
+  get '/create' => 'martial_arts#create'
   get '/karate' => 'martial_arts#karate' 
   get '/kung_fu' => 'martial_arts#kung_fu' 
   get '/judo' => 'martial_arts#judo' 
@@ -22,11 +24,8 @@ end
   get '/brazilian_jui_jitsu' => 'martial_arts#brazilian_jui_jitsu' 
   get '/muay_thai' => 'martial_arts#muay_thai' 
   get '/kung_fu' => 'martial_arts#kung_fu'  
-  get '/create' => 'martial_arts#create', as: 'martial_arts'
-  get '/new' => 'martial_arts#new' 
-  post '/blog' => 'martial_arts#blog' 
+  #post '/blog' => 'martial_arts#blog' as: :blogs
   post '/comment' => 'martial_arts#comment', as: 'user_comment'
-  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -81,8 +80,10 @@ end
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-  #   end
+  #   
+
 end
+
        
  
 
