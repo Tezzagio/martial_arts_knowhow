@@ -23,7 +23,7 @@ end
   get '/muay_thai' => 'martial_arts#muay_thai' 
   get '/kung_fu' => 'martial_arts#kung_fu'  
   get '/create' => 'martial_arts#create', as: 'martial_arts'
-  get '/new' => 'martial_arts#new' as: :blogs
+  get '/new' => 'martial_arts#new' as: :blog
   post '/blogs' => 'martial_arts#blog' as: 'blogs'
   post '/comment' => 'martial_arts#comment', as: 'user_comment'
   post '/write' => 'blog#write', as: 'blogs'
@@ -82,10 +82,11 @@ end
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+     end
     end
    end
   end
  end
-end
+end 
 
 
