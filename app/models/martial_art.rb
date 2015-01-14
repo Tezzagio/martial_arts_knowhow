@@ -5,7 +5,7 @@ class MartialArt < ActiveRecord::Base
 
   validates :name, presence: true, uniqueness: true 
   validates :description, presence: true
-  validates :user_id, presence: true, uniqueness: true 
+  validates :image, presence: true
 
   #scope :popular, -> { where('upvotes >= ?', 4)}
   #scope :recent, -> { where('created_at >= ?', Date.today)}

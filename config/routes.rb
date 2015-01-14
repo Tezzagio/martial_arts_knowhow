@@ -25,6 +25,7 @@ end
   get '/muay_thai' => 'martial_arts#muay_thai' 
   get '/kung_fu' => 'martial_arts#kung_fu'  
   #post '/blog' => 'martial_arts#blog' as: :blogs
+  post '/new' => 'martial_arts#create', as: 'martial_art'
   post '/comment' => 'martial_arts#comment', as: 'user_comment'
 
   # The priority is based upon order of creation: first created -> highest priority.

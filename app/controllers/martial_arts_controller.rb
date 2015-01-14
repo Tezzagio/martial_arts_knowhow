@@ -15,35 +15,7 @@ class MartialArtsController < ApplicationController
     @martial_art = MartialArt.new(user: current_user) 
   end
 
-  def new
-    @blog = Blog.new(user: current_user) 
-  end
-
-  def blog
-      @blog = Blog.new(parameters)
-      if @blog.valid?
-        @blog.save
-        flash[:info] = 'Nice one! Blog created'
-        return redirect_to root_path
-    end
-
-    flash[:error] = "You have errors"
-
-  end
-
-
-  def show
-    @martial_art = MartialArt.find params[:id]
-  end
-
-  def comment
-    @martial_art = MartialArt.new user_id: current_user.id
-    @martial_art = current_user.comments.new
-  end
-
-  
-
-def create
+  def create
   @martial_art = MartialArt.new(parameters)
   if @martial_art.valid?
     @martial_art.save
@@ -52,8 +24,35 @@ def create
   end
 
    flash[:error] = "You have errors"
-end
+  end
 
+
+  def new
+    @blog = Blog.new(user: current_user) 
+  end
+
+  def blog
+      @blog = Blog.new(parameters)
+      if @blog.valid?
+        @blog.save
+        flash[:info] = 'Excellent news! Blog created'
+        return redirect_to root_path
+    end
+
+    flash[:error] = "You have errors"
+  end
+
+
+  #def show
+    #@martial_art = MartialArt.find params[:id]
+  #end
+
+  #def comment
+    #@martial_art = MartialArt.new user_id: current_user.id
+    #@martial_art = current_user.comments.new
+  #end
+
+  
   private
 
   def parameters
