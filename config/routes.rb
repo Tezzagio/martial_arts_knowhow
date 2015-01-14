@@ -11,8 +11,8 @@ end
 
   
   get '/search' => 'martial_arts#search'
-  get '/new' => 'martial_arts#new'
-  get '/create' => 'martial_arts#create'
+  get '/new' => 'martial_arts#add'
+  #get '/create' => 'martial_arts#create'
   get '/karate' => 'martial_arts#karate' 
   get '/kung_fu' => 'martial_arts#kung_fu' 
   get '/judo' => 'martial_arts#judo' 

@@ -12,7 +12,7 @@ class MartialArtsController < ApplicationController
   end
 
   def add
-    @martial_art = MartialArt.new(user: current_user) 
+    @martial_art = MartialArt.new
   end
 
   def create
