@@ -1,15 +1,15 @@
 MartialArt.delete_all
-MartialArt.create name: "Karate", description: "Meta Tshirt showing Warning about inability to load Tshirt", image: "rushed_to_market.png"
-MartialArt.create name: "Kung-fu", description: "Darwin with paper cutouts of evolution", image: "darwins_delight.png"
-MartialArt.create name: "Judo", description: "Button Masher's Manifesto", image: "victory_through_chaos.png"
-MartialArt.create name: "Tai Chi", description: "Gaming consoles as Star Wars battle vehicles", image: "console_wars.png"
-MartialArt.create name: "Taekwondo", description: "Lightsabers charging at an outlet", image: "downtime.png"
-MartialArt.create name: "Aikido", description: "Solo and Greedo in 8-bit emulating text based game", image: "shoot_first.png"
-MartialArt.create name: "Krav Maga", description: "Stick Figure guy has enough", image: "i_quit.png"
-MartialArt.create name: "Jui Jitsu", description: "Vader makes eggs for a young Luke and Leia", image: "family_breakfast.png"
-MartialArt.create name: "Brazilian Jui Jitsu", description: "Pirate turns to digital piracy", image: "music_pirate.png"
-MartialArt.create name: "Tang Soo Do", description: "Ninja Turtle as famous painter", image: "leonardo.png"
-MartialArt.create name: "Muay Thia", description: "Flying cup of coffee", image: "my_morning_sidekick.png"
+MartialArt.create name: "Karate", description: "Karate", image: "Karate.png"
+MartialArt.create name: "Kung Fu", description: "Kung Fu", image: "Kung Fu.png"
+MartialArt.create name: "Judo", description: "Judo", image: "Judo.png"
+MartialArt.create name: "Tai Chi", description: "Tai_Chi", image: "Tai_Chi.png"
+MartialArt.create name: "Taekwondo", description: "Taekwando", image: "Taekwando.png"
+MartialArt.create name: "Aikido", description: "Aikido", image: "Aikido.png"
+MartialArt.create name: "Krav Maga", description: "Krav_Maga", image: "Krav_Maga.png"
+MartialArt.create name: "Jui Jitsu", description: "Jui_Jitsu", image: "Jui_Jitsu.png"
+MartialArt.create name: "Brazilian Jui Jitsu", description: "Brazilian_Jui_Jitsu", image: "Brazilian_Jui_Jitsu.png"
+MartialArt.create name: "Tang Soo Do", description: "Tang Soo Do", image: "Tang Soo Do.png"
+MartialArt.create name: "Muay Thia", description: "Muay Thia", image: "Muay Thia.png"
 
 
 

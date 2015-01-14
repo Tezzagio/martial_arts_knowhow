@@ -1,6 +1,7 @@
 class MartialArt < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :comments
+  has_many :users
+  has_many :comments, :through => :users
+
 
   validates :name, presence: true, uniqueness: true 
   validates :description, presence: true
