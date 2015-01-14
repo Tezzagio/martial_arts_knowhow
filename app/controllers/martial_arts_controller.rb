@@ -11,17 +11,12 @@ class MartialArtsController < ApplicationController
     @no_results = !@martial_art
   end
 
-  def new
+  def add
     @martial_art = MartialArt.new(user: current_user) 
   end
 
-  def show
-    @martial_art = MartialArt.find params[:id]
-  end
-
-  def comment
-    @martial_art = MartialArt.new user_id: current_user.id
-    @martial_art = current_user.comments.new
+  def new
+    @blog = Blog.new(user: current_user) 
   end
 
   def blog
@@ -35,6 +30,18 @@ class MartialArtsController < ApplicationController
     flash[:error] = "You have errors"
 
   end
+
+
+  def show
+    @martial_art = MartialArt.find params[:id]
+  end
+
+  def comment
+    @martial_art = MartialArt.new user_id: current_user.id
+    @martial_art = current_user.comments.new
+  end
+
+  
 
 def create
   @martial_art = MartialArt.new(parameters)
@@ -50,7 +57,7 @@ end
   private
 
   def parameters
-    params.require(:martial_art).permit(:name, :description, :user_id)
-    params.require(:blog).permit(:user_id, :category_id)
+    params.require(:martial_art).permit(:name, :description, :image)
+    params.require(:blog).permit(:title, :description, :category_id)
   end
 end

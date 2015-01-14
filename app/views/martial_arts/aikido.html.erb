@@ -7,7 +7,7 @@
 <%= link_to 'blog new', blog_path   %>
 <% @blogs.each do |blog|  %>
 
-  <%= render partial: 'blog', locals: { blog: @blog }  %>
+  <%= render partial: 'blog', locals: { blog: blog } %>
   
 <% end %>
 
