@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   
   devise_scope :user do
-  get '/logout' => 'devise/session#destroy', as: 'logout'
+  get '/Logout' => 'devise/session#delete', as: 'Logout'
 end
 
   devise_for :users
