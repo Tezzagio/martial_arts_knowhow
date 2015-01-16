@@ -10,75 +10,10 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
 
-  	<!-- Latest compiled and minified CSS -->
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+</head>
+<body>
 
-  	<!-- Optional theme -->
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-
-  	<!-- Latest compiled and minified JavaScript -->
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
-  </head>
-
-  <body>
-    <div class="container">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="http://192.168.33.10:3000/">Martial Arts know-how</a>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="http://en.wikipedia.org/wiki/Category:Martial_arts_terms">Martial Arts Terms<span class="sr-only">(current)</span></a></li>
-              <li><a href="http://en.wikipedia.org/wiki/Martial_arts_timeline">Martial Arts Timeline</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More Martial Arts Sites<span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="http://wp.me/1WOFv">Kungfuforeveryone</a></li>
-                  <li><a href="http://student.city.ac.uk/~abkp211/mmcourseworktm/mmcoursework_file3.html">Bruce Lee homage</a></li>
-                  <li><a href="http://www.kyusholibrary.com/">Martial Arts Resource Center</a></li>
-                  
-                </ul>
-              </li>
-            </ul>
-            
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="https://www.google.co.uk/search?q=martial+arts+images&es_sm=119&biw=1366&bih=582&tbm=isch&tbo=u&source=univ&sa=X&ei=BRu1VPXpDsbU7AaEtIGACA&sqi=2&ved=0CE4Q7Ak">Martial Arts Images</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Martial Arts Actions<span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="http://en.wikipedia.org/wiki/Kick">Kicks</a></li>
-                  <li><a href="http://en.wikipedia.org/wiki/Punch_%28combat%29">Punches</a></li>
-                  <li><a href="http://en.wikipedia.org/wiki/Stance_%28martial_arts%29">Stances</a></li>
-          
-                </ul>
-              </li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
-
-  <style>
-
-  body {
-
-    text-align: left;
-    background-color: ;
-    color: yellow;
-    font-family: helvetica;
-    }
-    
-  </style>
+  	
 
 <% if user_signed_in? %>
   <li>
