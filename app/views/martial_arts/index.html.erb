@@ -11,7 +11,11 @@
 
   </head>
 
+
   <body>
+
+  <link rel="stylesheet" href="styles.css">
+
     <div class="container">
       <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -65,12 +69,11 @@
     text-align: left;
     background-color: ;
     color: yellow;
-    font-family: helvetica;
+    font-family: Georgia;
     }
     
   </style>
 
-<link rel="stylesheet" href="styles.css">
 
 <style>
 
@@ -78,7 +81,7 @@
     text-align: left;
     background: purple;
     color: yellow;
-    font-family: helvetica;
+    font-family: Georgia;
     }
     
  </style>
@@ -100,7 +103,7 @@ h2 {
 
 p  {
     text-align: center;
-    font-family: helvetica;
+    font-family: Georgia;
     padding:0.5px;
     margin:0px;
 }
@@ -120,7 +123,7 @@ ul  {
 <p style="color: black">Discover which Martial Art is more suitable for you and your children</p>
 
 <p>
-	<%= link_to 'Add a new Martial Art for discussion (please log in first)', martial_art_path %>
+	<button><%= link_to 'Add a new Martial Art for discussion (please log in first)', martial_art_path %></button>
 </p>
 
 <p style="color: black">Search for your Martial Art below</p>
@@ -145,6 +148,8 @@ ul  {
 <h2>Current Martial Arts</h2>
 
  <ul>
+
+<link rel="stylesheet" href="styles.css">
 
   <li><a href="http://en.wikipedia.org/wiki/Karate">Karate</a></li>
   <li><a href="http://en.wikipedia.org/wiki/Kung_fu_%28term%29">Kung Fu</a></li>

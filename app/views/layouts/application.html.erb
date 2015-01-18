@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-
-<link rel="stylesheet" href="styles.css">
+<head>
 
     <title>MartialArtsKnowhow</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -11,29 +9,46 @@
     <%= csrf_meta_tags %>
 
 </head>
+
 <body>
 
-  	
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+  body {
+    text-align: left;
+    background: purple;
+    color: yellow;
+    font-family: Georgia;
+    }
+    
+ </style>
+
+ <body>
 
 <% if user_signed_in? %>
   <li>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
   </li>
+
 <% else %>
 
   <li>
-  <%= link_to('Sign in', new_user_session_path)  %>  
+  <%= link_to('Sign in', new_user_session_path)  %> 
   </li>
 
 <% end %>
 
 <% if user_signed_in? %>
   <li>
-  <%= link_to('Edit registration', edit_user_registration_path) %>
+  <%= link_to('Edit registration', edit_user_registration_path) %> 
   </li>
+
 <% else %>
+
   <li>
-  <%= link_to('Register', new_user_registration_path)  %>
+  <%= link_to('Register', new_user_registration_path)  %> 
   </li>
 
 <% end %>
