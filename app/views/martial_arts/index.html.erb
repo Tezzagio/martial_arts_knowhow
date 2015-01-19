@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+  <head>
+
 <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
@@ -10,6 +12,55 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
   </head>
+
+  <style>
+
+  li {
+
+    text-align: left;
+    background-color: ;
+    color: yellow;
+    font-family: Georgia;
+    }
+    
+  </style>
+
+  <body>
+
+  <ul>
+
+<link rel="stylesheet" href="styles.css">
+
+<% if user_signed_in? %>
+
+  <li>
+   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+  </li>
+
+<% else %>
+
+  <li>
+  <%= link_to('Sign in', new_user_session_path)  %> 
+  </li>
+
+<% end %>
+
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Edit registration', edit_user_registration_path) %> 
+  </li>
+
+<% else %>
+
+  <li>
+  <%= link_to('Register', new_user_registration_path)  %> 
+  </li>
+
+</ul>
+
+</body>
+
+<% end %>
 
 
   <body>
@@ -62,18 +113,6 @@
         </div><!-- /.container-fluid -->
       </nav>
 
-  <style>
-
-  body {
-
-    text-align: left;
-    background-color: ;
-    color: yellow;
-    font-family: Georgia;
-    }
-    
-  </style>
-
 
 <style>
 
@@ -118,7 +157,7 @@ ul  {
 
 </style>
 
-<h1 style="color: black">Martial Art discussions</h1>
+<h1>Martial Art discussions <span class="label label-default"></span></h1>
 
 <p style="color: black">Discover which Martial Art is more suitable for you and your children</p>
 
@@ -140,7 +179,6 @@ ul  {
 <% @martial_arts.each do |martial_art| %>
 
 	<%= render partial: 'martial_art', locals: { a_martial_art: martial_art } %>
-
 <% end %>
 
 </div>

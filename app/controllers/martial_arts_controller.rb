@@ -26,7 +26,6 @@ class MartialArtsController < ApplicationController
    flash[:error] = "You have errors"
   end
 
-
   def new
     @blog = Blog.new(user: current_user) 
   end

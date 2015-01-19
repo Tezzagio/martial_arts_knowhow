@@ -1,5 +1,9 @@
-<p> <button style="color:black">Name</button><%= martial_art.name %><input type="text" placeholder="please type" style="color:black"> </p>
-	<p><button style="color:black">Description</button><%= martial_art.description %><input type="text" placeholder="please type" style="color:black"> </p>
-	<hr>
 
+<%= form_for @martial_art do |f| %>
+	Name: <%= f.text_field :name %><br>
+	Martial Art: <%= f.text_field :martial_art %><br>
+
+	<%= f.submit('Enter')%>
+
+	<% end %>
 
