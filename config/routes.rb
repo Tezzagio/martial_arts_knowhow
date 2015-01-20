@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   
   
+  get 'static_pages/home'
+
+  get 'static_pages/help'
+
   devise_scope :user do
   get '/Logout' => 'devise/session#delete', as: 'Logout'
 end
