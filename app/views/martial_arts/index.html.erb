@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
-  <head>
+<html>
+
+ <head>
 
 <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
@@ -11,28 +13,64 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
-  </head>
+ </head>
 
-  <style>
+<style>
 
-  li {
+ body {
+    text-align: left;
+    background: purple;
+    color: yellow;
+    font-family: Georgia;
+    }
+
+
+ h1 {
+    text-align: center;
+    font-family: Georgia;
+    border:1px solid black;
+
+}
+
+ h2 {
+    text-align: left;
+    color: black;
+    font-family: Georgia;
+}
+
+ p  {
+    text-align: center;
+    font-family: Georgia;
+    padding:0.5px;
+    margin:0px;
+}
+
+ div  {
+    text-align: center;
+}
+
+ ul  {
+    text-align: left;
+}
+
+ li {
 
     text-align: left;
     background-color: ;
     color: yellow;
     font-family: Georgia;
-    }
+}
 
-  ul  {
+ ul  {
     text-align: left;
-    }
+}
 
-    
-  </style>
 
-  <body>
+</style>
 
-  <ul>
+<body>
+
+<ul>
 
 <link rel="stylesheet" href="styles.css">
 
@@ -63,17 +101,12 @@
 
 </ul>
 
-</body>
-
 <% end %>
-
-
-  <body>
 
   <link rel="stylesheet" href="styles.css">
 
     <div class="container">
-      <nav class="navbar navbar-default">
+      <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -117,58 +150,13 @@
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
+</body>
 
 
-<style>
 
-  body {
-    text-align: left;
-    background: purple;
-    color: yellow;
-    font-family: Georgia;
-    }
-    
- </style>
-
-<style>
-
-h1 {
-    text-align: center;
-    font-family: Georgia;
-    border:1px solid black;
-
-}
-
-h2 {
-    text-align: left;
-    color: black;
-    font-family: Georgia;
-}
-
-p  {
-    text-align: center;
-    font-family: Georgia;
-    padding:0.5px;
-    margin:0px;
-}
-
-div  {
-    text-align: center;
-}
-
-ul  {
-    text-align: left;
-}
-
-</style>
-
-<h1>Martial Art discussions <span class="label label-default"></span></h1>
+<h1><span class="label label-default" >Martial Art discussions</span></h1>
 
 <p style="color: black">Discover which Martial Art is more suitable for you and your children</p>
-
-<p>
-	<button><%= link_to 'Add a new Martial Art for discussion (please log in first)', martial_art_path %></button>
-</p>
 
 <p style="color: black">Search for your Martial Art below</p>
 
@@ -180,6 +168,10 @@ ul  {
 <button style="color:black">Search</button>
 
 </form>
+
+<p>
+  <%= link_to 'Add a new Martial Art for discussion' , martial_arts_path %>
+</p>
 
 <% @martial_arts.each do |martial_art| %>
 
@@ -206,6 +198,7 @@ ul  {
   <li><a href="http://en.wikipedia.org/wiki/Tang_Soo_Do">Tang Soo Do</a></li>
   <li><a href="http://en.wikipedia.org/wiki/Muay_Thai">Muay Thai</a></li>
 
-</ul>
+ </ul>
 
+</html>
 
