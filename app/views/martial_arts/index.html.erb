@@ -4,6 +4,8 @@
 
  <head>
 
+<link rel="stylesheet" href="styles.css">
+
 <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
@@ -20,7 +22,7 @@
  body {
     text-align: left;
     background: purple;
-    color: yellow;
+    color: black;
     font-family: Georgia;
     }
 
@@ -56,8 +58,7 @@
  li {
 
     text-align: left;
-    background-color: ;
-    color: yellow;
+    color: black;
     font-family: Georgia;
 }
 
@@ -72,7 +73,6 @@
 
 <ul>
 
-<link rel="stylesheet" href="styles.css">
 
 <% if user_signed_in? %>
 
@@ -102,8 +102,6 @@
 </ul>
 
 <% end %>
-
-  <link rel="stylesheet" href="styles.css">
 
     <div class="container">
       <nav class="navbar navbar-inverse">
@@ -186,8 +184,6 @@
 
  <ul>
 
-<link rel="stylesheet" href="styles.css">
-
   <li><a href="https://floating-citadel-8222.herokuapp.com/karate">Karate</a></li>
   <li><a href="https://floating-citadel-8222.herokuapp.com/kung_fu">Kung Fu</a></li>
   <li><a href="https://floating-citadel-8222.herokuapp.com/judo">Judo</a></li>
@@ -202,6 +198,9 @@
 
  </ul>
 
+<p>
+  <%= link_to 'home' , home_path %>
+</p>
 
 
 </html>

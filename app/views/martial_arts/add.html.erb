@@ -3,8 +3,9 @@
 <style>
 
 h1 {
+
     text-align: center;
-    color: green;
+    color: white;
     font-family: Georgia;
     border:1px solid black;
 
@@ -13,6 +14,10 @@ h1 {
 </style>
 
 
-<h1> Add a new Martial Art </h1>
+<h1> Add the new Martial Arts information below </h1>
 
 <%= render partial: 'martial_art', locals: { a_martial_art: @martial_art } %>
+
+<p>
+	<%= link_to 'home' , home_path %>
+</p>
