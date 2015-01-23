@@ -20,7 +20,7 @@ end
   get '/search' => 'martial_arts#search'
   get '/new' => 'martial_arts#add'
   #get '/create' => 'martial_arts#create'
-  get '/martial_arts' => 'martial_arts#karate' 
+  get '/karate' => 'martial_arts#karate' 
   get '/kung_fu' => 'martial_arts#kung_fu' 
   get '/judo' => 'martial_arts#judo' 
   get '/tia_chi' => 'martial_arts#tia_chi' 

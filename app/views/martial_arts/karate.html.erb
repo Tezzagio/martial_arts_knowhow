@@ -4,13 +4,4 @@
 
 <p>To add your Karate wisdom, please join the discussion</p>
 
-<input type="email" placeholder="your email">
-
-<p><%= link_to 'blog new', blogs_path %></p>
-
-<% @blogs.each do |blog|  %>
-
-  <%= render partial: 'blog', locals: { blog: blog } %>
-  
-<% end %>
 

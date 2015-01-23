@@ -11,6 +11,10 @@ class MartialArtsController < ApplicationController
     @no_results = !@martial_art
   end
 
+  def karate
+    @karate = MartialArt.all
+  end
+
   def add
     @martial_art = MartialArt.new
   end
@@ -41,9 +45,7 @@ class MartialArtsController < ApplicationController
     flash[:error] = "You have errors"
   end
 
-  def karate
-    @martial_arts = MartialArt.all
-  end
+
 
 
   #def show
