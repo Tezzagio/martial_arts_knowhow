@@ -11,10 +11,6 @@ end
 
   root 'martial_arts#index'
 
-  get 'static_pages/home'
-
-  get 'static_pages/help'
-
   get '/home' => 'static_pages#home'
   get '/help' => 'static_pages#help'
   get '/search' => 'martial_arts#search'
