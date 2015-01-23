@@ -28,8 +28,8 @@ end
   get '/krav_maga' => 'martial_arts#krav_maga' 
   get '/jui_jitsu' => 'martial_arts#jui_jitsu' 
   get '/brazilian_jui_jitsu' => 'martial_arts#brazilian_jui_jitsu' 
-  get '/muay_thai' => 'martial_arts#muay_thai' 
-  get '/kung_fu' => 'martial_arts#kung_fu'  
+  get '/tang_soo_do' => 'martial_arts#tang_soo_do' 
+  get '/muay_thai' => 'martial_arts#muay_thai'   
   #post '/blog' => 'martial_arts#blog' as: :blogs
   post '/new' => 'martial_arts#create', as: 'martial_arts'
   post '/comment' => 'martial_arts#comment', as: 'user_comment'
