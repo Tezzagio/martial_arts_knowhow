@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
   
   
-  get 'static_pages/home'
-
-  get 'static_pages/help'
+  
 
   devise_scope :user do
   get '/Logout' => 'devise/session#delete', as: 'Logout'
@@ -13,12 +11,16 @@ end
 
   root 'martial_arts#index'
 
+  get 'static_pages/home'
+
+  get 'static_pages/help'
+
   get '/home' => 'static_pages#home'
   get '/help' => 'static_pages#help'
   get '/search' => 'martial_arts#search'
   get '/new' => 'martial_arts#add'
   #get '/create' => 'martial_arts#create'
-  get '/karate' => 'martial_arts#karate' 
+  get '/martial_arts' => 'martial_arts#karate' 
   get '/kung_fu' => 'martial_arts#kung_fu' 
   get '/judo' => 'martial_arts#judo' 
   get '/tia_chi' => 'martial_arts#tia_chi' 

@@ -41,6 +41,10 @@ class MartialArtsController < ApplicationController
     flash[:error] = "You have errors"
   end
 
+  def karate
+    @martial_arts = MartialArt.all
+  end
+
 
   #def show
     #@martial_art = MartialArt.find params[:id]
