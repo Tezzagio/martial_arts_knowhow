@@ -9,7 +9,8 @@ end
 
   devise_for :users
 
-  root 'static_pages#home'
+  #root 'static_pages#home'
+  root 'martial_arts#index'
 
   get '/index' => 'martial_arts#index'
   get '/help' => 'static_pages#help'
