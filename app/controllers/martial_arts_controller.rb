@@ -11,8 +11,48 @@ class MartialArtsController < ApplicationController
     @no_results = !@martial_art
   end
 
+  def aikido
+    @aikido= MartialArt.all
+  end
+
+  def brazillian_jui_jitsu
+    @brazillian_jui_jitsu= MartialArt.all
+  end
+
+  def judo
+    @judo= MartialArt.all
+  end
+
+  def jui_jitsu
+    @jui_jitsu= MartialArt.all
+  end
+
   def karate
     @karate = MartialArt.all
+  end
+
+  def krav_maga
+    @krav_maga= MartialArt.all
+  end
+
+  def kung_fu
+    @kung_fu = MartialArt.all
+  end
+
+  def muay_thai
+    @muay_thai = MartialArt.all
+  end
+
+  def taekwondo
+    @taekwondo = MartialArt.all
+  end
+
+  def thai_chi
+    @thai_chi = MartialArt.all
+  end
+
+  def tang_soo_do
+    @tang_soo_do = MartialArt.all
   end
 
   def add

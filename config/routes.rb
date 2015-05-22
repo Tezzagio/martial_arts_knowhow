@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
   
-  
-  
-
   devise_scope :user do
   get '/Logout' => 'devise/session#delete', as: 'Logout'
 end
