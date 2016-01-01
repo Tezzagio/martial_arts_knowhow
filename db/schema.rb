@@ -11,18 +11,68 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150106094233) do
+ActiveRecord::Schema.define(version: 20150113163057) do
 
-  create_table "users", force: true do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "blogs", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "user_id"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "widgets", force: true do |t|
-    t.string   "name"
+  add_index "blogs", ["category_id"], name: "index_blogs_on_category_id"
+  add_index "blogs", ["user_id"], name: "index_blogs_on_user_id"
+
+  create_table "comments", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "martial_arts", force: true do |t|
+    t.string   "name",        limit: nil
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.text     "description"
+  end
+
+  add_index "martial_arts", ["user_id"], name: "index_martial_arts_on_user_id"
+
+  create_table "regional_origins", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_comments", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "email"
+    t.string   "reset_password_token"
+    t.string   "encrypted_password"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count"
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email"
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token"
+
+  create_table "widgets", force: true do |t|
+    t.string   "name",       limit: nil
+    t.integer  "user_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   add_index "widgets", ["user_id"], name: "index_widgets_on_user_id"

@@ -1,14 +1,40 @@
 Rails.application.routes.draw do
+  
+  devise_scope :user do
+  get '/Logout' => 'devise/session#delete', as: 'Logout'
+end
 
+<<<<<<< HEAD
   root 'widgets#index'
 
   get 'widgets/index'
 
   devise_for :users
+=======
+  devise_for :users
 
-devise_scope :user do
-  get '/logout' => 'devise/session#destroy', as: 'logout'
-end
+  #root 'static_pages#home'
+  root 'martial_arts#index'
+>>>>>>> caf24ed2d81fa4301a500ce03f0aa19b2c83e21d
+
+  get '/index' => 'martial_arts#index'
+  get '/help' => 'static_pages#help'
+  get '/search' => 'martial_arts#search'
+  get '/new' => 'martial_arts#add'
+  get '/karate' => 'martial_arts#karate' 
+  get '/kung_fu' => 'martial_arts#kung_fu' 
+  get '/judo' => 'martial_arts#judo' 
+  get '/tai_chi' => 'martial_arts#tai_chi' 
+  get '/taekwondo' => 'martial_arts#taekwondo' 
+  get '/aikido' => 'martial_arts#aikido' 
+  get '/krav_maga' => 'martial_arts#krav_maga' 
+  get '/jui_jitsu' => 'martial_arts#jui_jitsu' 
+  get '/brazilian_jui_jitsu' => 'martial_arts#brazilian_jui_jitsu' 
+  get '/tang_soo_do' => 'martial_arts#tang_soo_do' 
+  get '/muay_thai' => 'martial_arts#muay_thai'   
+  #post '/blog' => 'martial_arts#blog' as: :blogs
+  post '/new' => 'martial_arts#create', as: 'martial_arts'
+  post '/comment' => 'martial_arts#comment', as: 'user_comment'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -63,5 +89,11 @@ end
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-  #   end
+  
+
 end
+
+       
+ 
+
+

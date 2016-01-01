@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<style>
+
+body {
+
+	text-align: center;
+	font-family: Georgia;
+	padding: 2.0px;
+	margin: 2.0px;
+}
+
+</style>
+
+<body>
+	
+<%= form_for @martial_art do |f| %>
+	Martial Art: <%= f.text_field :name %><br></br>
+	Regional Origin : <%= f.text_field :description %><br></br>
+
+	<%= f.submit('Enter')%>
+
+	<% end %>
+
+</body>

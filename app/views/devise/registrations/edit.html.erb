@@ -1,3 +1,39 @@
+<!DOCTYPE html>
+
+<style>
+
+h2 {
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-family: Georgia;
+    border:3px solid black;
+    padding:11px;
+
+}
+
+
+div  {
+    text-align: center;
+}
+
+</style>
+
+<style>
+
+h3 {
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-family: Georgia;
+    border:3px solid black;
+    padding:11px;
+
+}
+
+</style>
+
+
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -14,22 +50,34 @@
 
   <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "on" %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, autocomplete: "on" %>
   </div>
 
   <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
+    <%= f.password_field :current_password, autocomplete: "on" %>
   </div>
 
   <div class="actions">
+
+    <style>
+
+  body {
+    color: black;
+    font-family: Georgia;
+    }
+    
+  </style>
+
     <%= f.submit "Update" %>
+
   </div>
+
 <% end %>
 
 <h3>Cancel my account</h3>
